@@ -2,19 +2,11 @@
 	margin: 0;
 	padding: 0;
 	border: 0;
+	outline: none;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
 }
-
-:root{
-    --main-color:#ffff;
-    --text-color:#eee;
-    --background: rgb(204,251,255);
-    --background-rd:linear-gradient(135deg, rgba(204,251,255,1) 35%, rgba(233,204,235,1) 90%);
-    --box-shadow: rgba(0,0,0,0.1)
-}
-
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -39,9 +31,3 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-/* .back{
-    background: var(--background);
-    background: var(--background-rd);
-    font: 600;
-    font-size: 40px;
-} */

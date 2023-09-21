@@ -1,0 +1,156 @@
+.topbar{
+    background: var(--background);
+    background: var(--background-rd);
+    display: flex;
+    min-height: 80px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+.wrapper-topbar-lc{
+    display: flex;
+    align-items: center;
+    flex: 7;
+}
+.topbarLeft{
+    flex: 3;
+}
+
+.topbarCenter{
+    flex: 4;
+}
+
+.topbarRight{
+    flex: 4;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logo{
+    width: 50%;
+}
+
+.searchbar{
+    width: 90%;
+    background-color: #ffff;
+    height: 40px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+}
+.search-input{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    padding: 0 15px;
+}
+
+.search-input:focus .searchbar{
+    outline: red;
+    outline-color: #eee;
+}
+
+.btn-search{
+    display: block;
+    width: 50px;
+    padding: 0px 15px;
+    height:100%;
+    border-top-right-radius: 50%;
+    border-left: 1px solid #eee;
+    cursor: pointer;
+}
+
+.topbarIcons{
+    display: flex;
+    flex: 9;
+    align-items: center;
+    justify-content: space-around;
+}
+.avatar-mini{
+    flex: 1;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    float: right;
+}
+
+.icon-item{
+    position: relative;
+    cursor: pointer;
+}
+
+.icon{
+    font-size: 30px;
+    color:var(--icon);
+}
+
+.notify{
+    position: absolute;
+    display: block;
+    color: var(--first-color);
+    text-align: center;
+    width: 15px;
+    height: 15px;
+    background-color: var(--red);
+    border-radius: 50%;
+    top: -4px;
+    right: -4px;
+}
+
+
+
+/* Media query */
+
+@media screen and (max-width: 768px) {
+    .topbar{
+        display: block;
+    }
+
+    .topbarLeft{
+        flex: 2;
+    }
+
+    .logo{
+        width: 80%;
+    }
+
+    .searchbar{
+        height: 34px;
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .topbarIcons{
+        margin: 0;
+        justify-content: space-between;
+    }
+
+    .topbarRight{
+        padding: 10px 0px;
+        border-top: 1px solid var(--light-color);
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    .icon{
+        font-size: 25px;
+    }
+    .avatar-mini{
+        width: 25px;
+        height: 25px;
+    }
+    .topbarIcons{
+        flex: 9;
+    }
+    .avatar-mini{
+        flex: 1;
+    }
+
+    .wrapper-topbar-lc{
+        padding: 14px 0;
+    }
+
+}
