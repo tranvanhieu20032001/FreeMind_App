@@ -1,16 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./darkmode.css";
 import {ReactComponent as Moon} from "./../../assets/images/Moon.svg"
 import {ReactComponent as Sun} from "./../../assets/images/Sun.svg"
 
 const DarkMode = () => {
-   const [darkmode, setDarkMode] = useState(false);
-
-    console.log("Darkmoon");
-    const toggleDarkMode = ()=>{
-        setDarkMode(!darkmode)
-        console.log(darkmode);
+    const [darkmode, setDarkMode] = useState(() => localStorage.mode === "dark");
+  const toggleDarkMode = (e) => {
+    setDarkMode(!darkmode);
+  };
+  useEffect(() => {
+    const html = window.document.documentElement;
+    const off = darkmode ? "light" : "dark";
+    const on = darkmode ? "dark" : "light";
+    if(darkmode){
+      document.getElementById("darkmode-toggle").checked = true
+    }else{
+      document.getElementById("darkmode-toggle").checked = false
     }
+    html.classList.remove(off);
+    html.classList.add(on);
+    localStorage.setItem("mode", on);
+  }, [darkmode]);
     return (
         <div className='dark_mode'>
             <input

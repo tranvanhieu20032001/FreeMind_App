@@ -1,18 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600&display=swap');
 
-:root{
-    --main-color:rgb(204,251,255);
-    --background: rgb(204,251,255);
-    --background-rd:linear-gradient(135deg, rgba(204,251,255,1) 35%, rgba(233,204,235,1) 90%);
+:root {
+    --background: rgb(204, 251, 255);
+    --background-rd: linear-gradient(135deg, rgba(204, 251, 255, 1) 35%, rgba(233, 204, 235, 1) 90%);
+    --background-dark: rgb(43, 88, 118);
+    --background-dark-rd: linear-gradient(135deg, rgb(165, 201, 204) 0, rgba(43, 88, 118, 1) 50%);
     --icon: rgb(66, 189, 200);
+    --icon-dark:#c7e996;
     --black: #192a56;
     --light-color: #666;
-    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .15);
+    --box-shadow: 0px 5px 14px -12px rgba(0, 0, 0, 0.5);
+    ;
     --first-color: #fff;
     --second-color: #000;
     --text-color: #192a56;
     --main-color: #49b14d;
-    --red:#ff0000;
+    --red: #ff0000;
 }
 
 * {
@@ -27,16 +30,45 @@
     transition: all .2s linear;
 }
 
-.container{
-   padding: 0 20px;
+.container {
+    padding: 0 20px;
 }
 
+/* Light mode */
+.background {
+    background: var(--background);
+    background: var(--background-rd);
+}
+
+body {
+    background-color: #f0f2f5;
+}
+
+.text {}
+
+.icon, .logo {
+    color: var(--icon);
+}
+
+/* Dark mode */
+.dark .background {
+    /* background: var(--background-dark); */
+    /* background: var(--background-dark-rd); */
+    background: rgb(5, 105, 112);
+}
+
+.dark body {
+    background-color: #374151;
+}
+
+.dark .icon, .dark .logo{
+    color: var(--icon-dark);
+}
+/* For media */
 @media screen and (max-width: 768px) {
-    .container{
+    .container {
         padding: 0 10px;
     }
 }
 
-@media screen and (max-width: 576px) {
-  
-}
+@media screen and (max-width: 576px) {}
