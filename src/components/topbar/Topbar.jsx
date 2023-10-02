@@ -2,11 +2,12 @@ import React from 'react'
 import './topbar.css'
 import '../root.css'
 import { BsBellFill, BsFillChatTextFill, BsHouseHeartFill, BsPersonFillAdd, BsSearch } from 'react-icons/bs';
-import DarkMode from '../darkmode/DarkMode';
+import DarkMode from '../../layouts/darkmode/DarkMode';
 import Tippy from '@tippyjs/react';
-import 'tippy.js/dist/tippy.css'; // optional
+import 'tippy.js/dist/tippy.css';
+import { MdFormatListBulleted } from 'react-icons/md';
 
-export default function Topbar() {
+export default function Topbar({_showLeftbar}) {
   const icons = [
     {
       id: 1,
@@ -33,11 +34,13 @@ export default function Topbar() {
       href: "https://www.facebook.com/profile.php?id=100037458979961",
     },
   ]
+
   return (
     <div className="topbar background container">
       <div className="wrapper-topbar-lc">
         <div className="topbarLeft">
          <h1 className='logo'>FREEMIND</h1>
+         <h1 className='logo-mb'>FM</h1>
         </div>
 
         <div className="topbarCenter">
@@ -50,7 +53,9 @@ export default function Topbar() {
             </Tippy>
           </div>
         </div>
-
+        <div className="leftbar-menu" onClick={_showLeftbar}>
+        <MdFormatListBulleted className='icon' />
+        </div>
       </div>
 
       <div className="topbarRight">
@@ -71,7 +76,7 @@ export default function Topbar() {
         </div>
         <Tippy content='Account'>
         <div className="avatar-mini">
-          <img className='avatar-mini' src="https://hocdohoacaptoc.com/wp-content/uploads/2022/02/avata-dep-nam-2.jpg" alt="" />
+          <img className='avatar' src="https://hocdohoacaptoc.com/wp-content/uploads/2022/02/avata-dep-nam-2.jpg" alt="" />
         </div>
         </Tippy>
       </div>

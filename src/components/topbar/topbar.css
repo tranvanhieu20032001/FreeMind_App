@@ -2,7 +2,7 @@
 
 .topbar{
     display: flex;
-    min-height: 80px;
+    height: 70px;
     align-items: center;
     position: sticky;
     top: 0;
@@ -13,6 +13,11 @@
     align-items: center;
     flex: 7;
 }
+
+.leftbar-menu{
+    display: none;
+}
+
 .topbarLeft{
     flex: 3;
     padding-right: 10px;
@@ -29,9 +34,13 @@
     justify-content: space-around;
 }
 
-.logo{
+.logo, .logo-mb{
     font-family: 'Cabin Sketch', cursive;
     font-size: 4rem;
+}
+
+.logo-mb{
+    display: none;
 }
 
 .searchbar{
@@ -64,8 +73,8 @@
     cursor: pointer;
 }
 .searchbar:focus-within{
-    outline: 1px solid var(--icon);
     outline-offset: -1px;
+    outline: 1px solid var(--icon);
 }
 
 .dark .searchbar:focus-within{
@@ -81,9 +90,6 @@
 }
 .avatar-mini{
     flex: 1;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
     float: right;
 }
 
@@ -117,6 +123,21 @@
 @media screen and (max-width: 768px) {
     .topbar{
         display: block;
+        height: 110px;
+    }
+
+    .leftbar-menu{
+        display: block;
+        padding: 0 0 0 7px;
+        cursor: pointer;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .logo-mb{
+        display: block;
     }
 
     .topbarLeft{
@@ -137,12 +158,21 @@
     .topbarRight{
         padding: 10px 0px;
         border-top: 1px solid var(--light-color);
+        gap: 10px;
     }
 
     .wrapper-topbar-lc{
         padding: 10px 0;
     }
 
+    .topbarLeft{
+        flex: 1;
+        padding-right: 10px;
+    }
+    
+    .topbarCenter{
+        flex: 5;
+    }
     .search-input{
         font-size: 12px;
     }
