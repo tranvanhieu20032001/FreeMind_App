@@ -1,0 +1,11 @@
+.rightbar{
+    flex: 4;
+    height: calc(100vh - 70px);
+
+}
+
+@media screen and (max-width: 768px){
+    .rightbar{
+        height:calc(100vh - 110px) ; 
+    }
+}

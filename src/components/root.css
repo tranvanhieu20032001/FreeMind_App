@@ -1,33 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 
 :root {
     --background: rgb(204, 251, 255);
-    --background-rd: linear-gradient(135deg, rgba(204, 251, 255, 1) 35%, rgba(233, 204, 235, 1) 90%);
+    --background-rd: linear-gradient(135deg, rgba(191, 233, 255, 0.619) 35%, rgba(232, 178, 235, 0.5) 90%);
     --background-dark: rgb(43, 88, 118);
-    --background-dark-rd: linear-gradient(135deg, rgb(165, 201, 204) 0, rgba(43, 88, 118, 1) 50%);
+    --background-dark-rd: linear-gradient(135deg, rgba(165, 201, 204, 0.708) 0, rgba(43, 88, 118, 1) 50%);
     --icon: rgb(66, 189, 200);
     --icon-dark:#c7e996;
     --black: #192a56;
     --light-color: #666;
-    --box-shadow: 0px 5px 14px -12px rgba(0, 0, 0, 0.5);
-    ;
+    --box-shadow: 0px 1px 5px -2px #000000;
     --first-color: #fff;
     --second-color: #000;
-    --text-color: #192a56;
+    --text-color: #565656;
     --main-color: #49b14d;
     --red: #ff0000;
 }
 
 * {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Mulish';
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     outline: none;
     border: none;
-    text-transform: capitalize;
     transition: all .2s linear;
+}
+
+hr{
+    height: 1.5px;
+    background-color: #cccccc;
+    margin: 10px 0;
 }
 
 .container {
@@ -38,13 +43,46 @@
 .background {
     background: var(--background);
     background: var(--background-rd);
+    backdrop-filter: blur(10px);
 }
 
-body {
+body,.sub-bg {
     background-color: #f0f2f5;
 }
 
-.text {}
+.text {
+    color: var(--text-color);
+}
+
+.avatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    object-fit: cover;
+}
+         
+.btn {
+    /* background-image: linear-gradient(to right, #ff6e7f 0%, #bfe9ff  51%, #ff6e7f  100%); */
+    background-image: linear-gradient(to right, #ccfbff 0%, #e9cceb  51%, #ccfbff  100%);
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: 600;
+    text-transform: capitalize;
+    transition: 0.5s;
+    background-size: 200% auto;       
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    cursor: pointer;
+    color: var(--text-color);
+  }
+
+  .btn:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
 
 .icon, .logo {
     color: var(--icon);
@@ -52,17 +90,18 @@ body {
 
 /* Dark mode */
 .dark .background {
-    /* background: var(--background-dark); */
-    /* background: var(--background-dark-rd); */
     background: rgb(5, 105, 112);
 }
 
-.dark body {
+.dark body, .dark .sub-bg {
     background-color: #374151;
 }
 
-.dark .icon, .dark .logo{
+.dark .icon, .dark .logo, .dark .logo-mb{
     color: var(--icon-dark);
+}
+.dark .text{
+    color: var(--first-color);
 }
 /* For media */
 @media screen and (max-width: 768px) {
