@@ -1,0 +1,51 @@
+.post{
+    box-shadow: var(--box-shadow);
+    background: var(--first-color);
+    padding:10px;
+}
+
+.post-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-user{
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+
+.post-user>span{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.post-control{
+    display: flex;
+    align-items: center;
+}
+
+
+.post-control-options, .post-control-hidden{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-control-options:hover, .post-control-hidden:hover{
+    background-color: #eee;
+}
+
+
+
+
+.post-info{
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
