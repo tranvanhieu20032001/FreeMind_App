@@ -47,7 +47,7 @@ hr{
 }
 
 body,.sub-bg {
-    background-color: #f0f2f5;
+    background-color: #ffffff;
 }
 
 .text {
@@ -60,6 +60,11 @@ body,.sub-bg {
     border-radius: 50%;
     cursor: pointer;
     object-fit: cover;
+}
+
+.username{
+    font-size: 18px;
+    font-weight: 600;
 }
          
 .btn {

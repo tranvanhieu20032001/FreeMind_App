@@ -2,12 +2,20 @@
     box-shadow: var(--box-shadow);
     background: var(--first-color);
     padding:10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
 
 .post-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.post-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .post-user{
@@ -26,7 +34,6 @@
     align-items: center;
 }
 
-
 .post-control-options, .post-control-hidden{
     width: 40px;
     height: 40px;
@@ -41,11 +48,72 @@
     background-color: #eee;
 }
 
-
-
-
-.post-info{
+.info-wrapper{
     display: flex;
     align-items: center;
-    margin-left: 30px;
+    font-size: 11px;
+}
+.post-body{
+    width: 100%;
+}
+
+.post-content {
+    font-size: 16px;
+    margin: 10px;
+}
+
+.post-image{
+    width: 100%;
+}
+
+
+.post-interact{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+
+.post-interact span{
+    font-size: 15px;
+}
+
+.post-like-counter{
+    display: flex;
+    align-items: center;
+}
+.post-like-counter img{
+    margin-right: 5px;
+}
+
+.post-interact .post-like-counter img{
+    width: 20px;
+}
+
+.post-cmt-share{
+    display: flex;
+}
+
+.post-cmt-share span{
+    margin: 0 5px 0 15px;
+}
+.post-cmt, .post-share{
+    display: flex;
+    align-items: center;
+}
+
+.post-footer{
+display: flex;
+align-items: center;
+justify-content: space-around;
+}
+.post-footer span{
+    margin-left: 5px;
+}
+
+.post-feeling, .post-comment, .post-share{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
 }

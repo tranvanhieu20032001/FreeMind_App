@@ -5,9 +5,6 @@
     margin-bottom: 30px;
 }
 
-.share-wrapper{
-}
-
 .share-top{
     display: flex;
     align-items: center;
@@ -57,5 +54,5 @@
     float: right;
     font-size: 16px;
     flex: 2;
-   justify-content: end;
+   justify-content: flex-end;
 }
