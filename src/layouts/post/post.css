@@ -2,12 +2,20 @@
     box-shadow: var(--box-shadow);
     background: var(--first-color);
     padding:10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
 
 .post-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.post-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .post-user{
@@ -26,7 +34,6 @@
     align-items: center;
 }
 
-
 .post-control-options, .post-control-hidden{
     width: 40px;
     height: 40px;
@@ -41,11 +48,169 @@
     background-color: #eee;
 }
 
-
-
-
-.post-info{
+.info-wrapper{
     display: flex;
     align-items: center;
-    margin-left: 30px;
+    font-size: 11px;
+}
+.post-body{
+    width: 100%;
+}
+
+.post-content {
+    font-size: 16px;
+    margin: 10px;
+}
+
+.post-image{
+    width: 100%;
+}
+
+
+.post-interact{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+
+.post-interact span{
+    font-size: 15px;
+}
+
+.post-like-counter{
+    display: flex;
+    align-items: center;
+}
+.post-like-counter img{
+    margin-right: 5px;
+}
+
+.post-interact .post-like-counter img{
+    width: 20px;
+}
+
+.post-cmt-share{
+    display: flex;
+}
+
+.post-cmt-share span{
+    margin: 0 5px 0 15px;
+}
+.post-cmt,.post-shareshow{
+    display: flex;
+    align-items: center;
+}
+
+.post-footer{
+display: flex;
+align-items: center;
+justify-content: space-around;
+}
+.post-footer span{
+    margin-left: 5px;
+}
+
+.post-feeling, .post-comment, .post-share{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.post-feeling:hover, .post-comment:hover, .post-share:hover{
+    background: #eee;
+}
+
+.post-feeling{
+    position: relative;
+}
+
+
+.emojis{
+    background-color: aliceblue;
+    box-shadow: var(--box-shadow);
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -130%);
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    padding: 5px 10px;
+    border-radius: 7px;
+    display: none;
+}
+
+.post-feeling:hover .emojis{
+    display: flex;
+    flex-direction: row;
+}
+
+.emojis li{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    transform: scale(0.8) translateY(0);
+    background: url(https://static.xx.fbcdn.net/rsrc.php/v2/yh/r/sqhTN9lgaYm.png);
+    background-size: cover;
+    position: relative;
+    transition: transform 0.2 s ease;
+}
+
+.emojis li:hover{
+    transform: scale(1) translateY(-5px);
+}
+.emojis li.like{
+    background-position: 0 -96px;
+}
+
+.emojis li.love{
+    background-position: 0 128px;
+}
+
+.emojis li.haha{
+    background-position: 0 -64px;
+}
+.emojis li.sad{
+    background-position: 0 96px;
+}
+.emojis li.wow{
+    background-position: 0 64px;
+}
+.emojis li.angry{
+    background-position: 0 0px;
+}
+
+.post-feeling {
+    text-transform: capitalize;
+}
+.post-feeling div{
+    width: 24px;
+    height: 24px;
+    background: url(https://static.xx.fbcdn.net/rsrc.php/v2/yh/r/sqhTN9lgaYm.png);
+    background-size: cover;
+}
+
+.post-feeling div.like{
+    background-position: 0 120px;
+}
+
+.post-feeling div.love{
+    background-position: 0 96px;
+}
+
+.post-feeling div.haha{
+    background-position: 0 240px;
+}
+.post-feeling div.sad{
+    background-position: 0 72px;
+}
+.post-feeling div.wow{
+    background-position: 0 48px;
+}
+.post-feeling div.angry{
+    background-position: 0 0px;
 }
