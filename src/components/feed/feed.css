@@ -1,7 +1,10 @@
 .feed{
     flex:5;
-    height: calc(100vh - 70px);
     margin: 20px 60px;
+}
+
+.feed-wrapper{
+    padding: 0 40px;
 }
 
 @media screen and (max-width: 768px){

@@ -1,13 +1,73 @@
-import React from "react";
+import React, { useState } from "react";
 import "./post.css";
 import { BsFillPersonCheckFill, BsThreeDots, BsX } from "react-icons/bs";
 import { TfiComment } from "react-icons/tfi";
 import { BiLike } from "react-icons/bi";
 import { PiShareFatLight } from "react-icons/pi";
-import heart from "../../assets/images/heart.png";
-import like from "../../assets/images/like.png";
+import Heart from "../../assets/images/heart.png";
+import Like from "../../assets/images/like.png";
+import { Users } from "../../data/data";
 
-export default function Post() {
+export default function Post({ post }) {
+  const Emojis = [
+    {
+      id: 1,
+      name: "like",
+    },
+    {
+      id: 2,
+      name: "love",
+    },
+    {
+      id: 3,
+      name: "haha",
+    },
+    {
+      id: 4,
+      name: "sad",
+    },
+    {
+      id: 5,
+      name: "wow",
+    },
+    {
+      id: 6,
+      name: "angry",
+    },
+  ];
+
+  const [like, setLike] = useState(post.like);
+  const [isLiked, setIsLiked] = useState(false);
+  const [emojis, setEmojis] = useState("");
+
+  const likeHandle = () => {
+    console.log("like");
+    if(!isLiked){
+      setEmojis('like')
+      setLike(like+1)
+      setIsLiked(true)
+    }
+    else{
+      setEmojis('')
+      setLike(like-1)
+      setIsLiked(false)
+    }
+
+  };
+
+
+  const handleEmojis = (event,id) => {
+    event.stopPropagation();
+    if(!emojis){
+      setEmojis(id)
+      setLike(like+1)
+      setIsLiked(true)
+    }
+    else{
+      setEmojis(id)
+    }
+  };
+
   return (
     <div className="post">
       <div className="post-wrapper">
@@ -15,13 +75,15 @@ export default function Post() {
           <div className="post-user">
             <img
               className="avatar"
-              src="https://cdn.pixabay.com/photo/2016/11/29/13/14/attractive-1869761_1280.jpg"
+              src={Users.filter((u) => u.id === post?.userId)[0].profilePicture}
               alt=""
             />
             <div className="post-info">
-              <span className="username text">Marry Curi</span>
+              <span className="username text">
+                {Users.filter((u) => u.id === post?.userId)[0].username}
+              </span>
               <div className="info-wrapper">
-                <span className="post-timer">1 minue ago</span>
+                <span className="post-timer">{post.date}</span>
                 <span>-</span>
                 <span className="post-permission">
                   <BsFillPersonCheckFill />
@@ -39,17 +101,18 @@ export default function Post() {
           </div>
         </div>
         <div className="post-body">
-          <p className="post-content">this is my post</p>
+          <p className="post-content">{post?.desc}</p>
           <img
             className="post-image"
-            // src="https://cdn.pixabay.com/photo/2016/11/29/13/14/attractive-1869761_1280.jpg"
+            // src="assets/VF8_dealerTracker.png"
+            src={post.photo}
             alt=""
           />
           <div className="post-interact">
             <div className="post-like-counter">
-              <img src={heart} alt="" />
-              <img src={like} alt="" />
-              <span>100</span>
+              <img src={Heart} alt="" />
+              <img src={Like} alt="" />
+              <span>{like}</span>
             </div>
 
             <div className="post-cmt-share">
@@ -57,7 +120,7 @@ export default function Post() {
                 <span>9</span>
                 <TfiComment size={18} />
               </div>
-              <div className="post-share">
+              <div className="post-shareshow">
                 <span>5</span>
                 <PiShareFatLight size={18} />
               </div>
@@ -66,9 +129,22 @@ export default function Post() {
         </div>
         <hr />
         <div className="post-footer">
-          <div className="post-feeling">
-            <BiLike size={20} />
-            <span>Like</span>
+          <div className="post-feeling" onClick={likeHandle}>
+            {emojis===''?(
+              <BiLike
+              size={20}
+            />
+            ):(<div className={emojis}></div>)}
+            <span>{emojis||'Like'}</span>
+            <ul className="emojis">
+              {Emojis.map((e) => (
+                <li
+                  key={e.id}
+                  className={e.name}
+                  onClick={(event) => handleEmojis(event,e.name)}
+                ></li>
+              ))}
+            </ul>
           </div>
           <div className="post-comment">
             <TfiComment size={20} />

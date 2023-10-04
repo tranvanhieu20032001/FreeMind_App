@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <>
       <Topbar _showLeftbar={_showLeftbar}/>
-      <div className='container wrap'>
+      <div className='container home-wrap'>
         <Leftbar showleftbar={showleftbar}/>
         <Feed/>
         <Rightbar/>

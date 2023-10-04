@@ -1,8 +1,59 @@
 .rightbar{
-    flex: 4;
-    height: calc(100vh - 70px);
+    flex: 3;
 
 }
+
+.birthday-box{
+    font-size: 15px;
+}
+
+.birthday-box img{
+    margin-right: 5px;
+}
+
+b{
+    font-weight: 700;
+}
+
+
+.img-event{
+    width: 80%;
+    border-radius: 10px;
+    margin: 30px 0;
+}
+
+.title-onlfriend{
+    font-size: 16px;
+    font-weight: 700;
+    margin: 20px 0 10px 0;
+}
+
+.list-onlfriend{
+    padding-left: 20px;
+}
+
+.onlfriend{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    gap:10px;
+}
+.onl-state{
+    display: inline-block;
+    position: relative;
+}
+
+.online{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(24, 184, 13);
+}
+
 
 @media screen and (max-width: 768px){
     .rightbar{
