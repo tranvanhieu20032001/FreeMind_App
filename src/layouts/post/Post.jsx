@@ -104,8 +104,8 @@ export default function Post({ post }) {
           <p className="post-content">{post?.desc}</p>
           <img
             className="post-image"
-            // src="assets/VF8_dealerTracker.png"
-            src={post.photo}
+            src="assets/VF8_dealerTracker.png"
+            // src={post.photo}
             alt=""
           />
           <div className="post-interact">

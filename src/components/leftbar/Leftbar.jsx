@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './leftbar.css'
 import { MdGroup, MdOutlineKeyboardArrowDown, MdOutlineKeyboardArrowUp, MdRssFeed, MdStorefront, MdVideoLibrary } from 'react-icons/md'
 import { BsFacebook, BsFillBookmarkHeartFill, BsFillBriefcaseFill, BsFillCalendarDayFill, BsFillPersonCheckFill, BsInstagram, BsYoutube } from 'react-icons/bs'
+import { ShowlbContext } from '../../App'
 
-export default function Leftbar({showleftbar}) {
+export default function Leftbar() {
+    const context = useContext(ShowlbContext)
     const listItems = [
         {
             id: 1,
@@ -72,7 +74,7 @@ export default function Leftbar({showleftbar}) {
             setShowmore(!showmore)
     }
     return (
-        <div className={`leftbar ${showleftbar?'show':''}`}>
+        <div className={`leftbar ${context.showleftbar?'show':''}`}>
             <div className="leftbar-wrapper">
                     <div className="leftbarList-item">
                         <img className='avatar' src="https://hocdohoacaptoc.com/wp-content/uploads/2022/02/avata-dep-nam-2.jpg" alt="" />

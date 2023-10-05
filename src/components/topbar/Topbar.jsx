@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './topbar.css'
 import '../root.css'
 import { BsBellFill, BsFillChatTextFill, BsHouseHeartFill, BsPersonFillAdd, BsSearch } from 'react-icons/bs';
@@ -6,8 +6,10 @@ import DarkMode from '../../layouts/darkmode/DarkMode';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 import { MdFormatListBulleted } from 'react-icons/md';
+import { ShowlbContext } from '../../App';
 
-export default function Topbar({_showLeftbar}) {
+export default function Topbar() {
+  const context = useContext(ShowlbContext)
   const icons = [
     {
       id: 1,
@@ -53,7 +55,7 @@ export default function Topbar({_showLeftbar}) {
             </Tippy>
           </div>
         </div>
-        <div className="leftbar-menu" onClick={_showLeftbar}>
+        <div className="leftbar-menu" onClick={context._showLeftbar}>
         <MdFormatListBulleted className='icon' />
         </div>
       </div>
