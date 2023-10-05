@@ -1,0 +1,149 @@
+.login{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f0f2f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -2;
+}
+
+.login-wrapper{
+    height: 500px;
+    background-color: white;
+    width: 400px;
+    z-index: -2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    box-shadow: var(--box-shadow);
+    padding: 20px 10px;
+}
+
+.login-title{
+    font-size: 24px;
+    font-weight: 700;
+    padding-top: 20px;
+}
+
+.login-desc{
+    font-size: 16px;
+    text-align: center;
+}
+
+div.form-group {
+    position: relative;
+    width: 90%;
+  }
+
+  input {
+    border: 0.5px solid lightgray;
+    font-size: 14px;
+    height: 35px;
+    width: 100%;
+    padding: 0.35em 0.45em;
+    transition: 0.4s;
+    background: transparent;
+    outline: none;
+  }
+
+  input:focus {
+    outline: none;
+    border: none;
+  }
+
+  input ~ span:before,
+  input ~ span:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0.5px;
+    background-color: #e47aeb;
+    transition: 0.3s;
+  }
+
+  input ~ span:after {
+    top: auto;
+    bottom: 0;
+    left: auto;
+    right: 0;
+  }
+
+  input ~ span i:before,
+  input ~ span i:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0.5px;
+    height: 0;
+    background-color: #1ee2f4;
+    transition: 0.4s;
+  }
+
+  input ~ span i:after {
+    left: auto;
+    right: 0;
+    top: auto;
+    bottom: 0;
+  }
+
+  input:focus ~ span:before,
+  input:focus ~ span:after {
+    width: 100%;
+    transition: 0.3s;
+  }
+
+  input:focus ~ span i:before,
+  input:focus ~ span i:after {
+    height: 100%;
+    transition: 0.4s;
+  }
+
+  input ~ p {
+    position: absolute;
+    left: 14px;
+    top: 12px;
+    font-size: 11px;
+    transition: 0.3s;
+    z-index: -1;
+    letter-spacing: 0.5px;
+  }
+
+  input:valid ~ p {
+    top: -18px;
+    left: 0;
+    font-size: 13px;
+    /* color: #ff3e00; */
+    transition: 0.3s;
+  }
+
+  input:focus ~ p{
+    top: -18px;
+    left: 0;
+    font-size: 13px;
+    transition: 0.3s;
+
+  }
+
+  .btn-login{
+    width: 90%;
+  }
+
+  .forgetpassword{
+    font-size: 13px;
+    height: 15px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 414px){
+    .login-wrapper{
+        width: 100vw;
+        height: 100vh;
+    }
+}

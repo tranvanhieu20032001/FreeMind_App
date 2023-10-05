@@ -31,6 +31,7 @@
 
 hr{
     height: 1.5px;
+    width: 100%;
     background-color: #cccccc;
     margin: 10px 0;
 }
@@ -53,7 +54,15 @@ body,.sub-bg {
 .text {
     color: var(--text-color);
 }
+.gradient-text{
+    background: linear-gradient(to right, #4e7ee7, #ee45ee); /* Gradient mặc định */
+  background-clip: text; /* Áp dụng gradient cho phần văn bản */
+  -webkit-background-clip: text; /* Hỗ trợ trình duyệt Safari */
+  color: transparent; /* Màu chữ trong suốt */
+  transition: background-position 0.5s; /* Thời gian chuyển đổi */
+  display: inline-block; /* Hiển thị như khối để bao quanh nội dung */ 
 
+}
 .avatar{
     width: 32px;
     height: 32px;
@@ -72,6 +81,7 @@ body,.sub-bg {
     background-image: linear-gradient(to right, #ccfbff 0%, #e9cceb  51%, #ccfbff  100%);
     padding: 10px 20px;
     text-align: center;
+    font-size: 16px;
     font-weight: 600;
     text-transform: capitalize;
     transition: 0.5s;

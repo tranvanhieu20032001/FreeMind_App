@@ -99,6 +99,14 @@ b{
     box-shadow: var(--box-shadow);
 }
 
+.toggle-password{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
 
 @media screen and (max-width: 768px){
     .rightbar{
@@ -106,3 +114,4 @@ b{
         height:calc(100vh - 110px) ;
     }
 }
+
