@@ -91,7 +91,10 @@
 }
 .avatar-mini{
     flex: 1;
-    float: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
 }
 
 .icon-item{
@@ -125,6 +128,10 @@
     .topbar{
         display: block;
         height: 110px;
+        position: sticky;
+        top: 0;
+        z-index: 9999;
+        box-shadow: var(--box-shadow);
     }
 
     .leftbar-menu{

@@ -4,11 +4,12 @@ import { BsFillPersonCheckFill, BsThreeDots, BsX } from "react-icons/bs";
 import { TfiComment } from "react-icons/tfi";
 import { BiLike } from "react-icons/bi";
 import { PiShareFatLight } from "react-icons/pi";
-import Heart from "../../assets/images/heart.png";
-import Like from "../../assets/images/like.png";
 import { Users } from "../../data/data";
 
 export default function Post({ post }) {
+  const PF = process.env.REACT_APP_PUBLIC_FOLDER
+  console.log("PF",PF);
+
   const Emojis = [
     {
       id: 1,
@@ -110,8 +111,8 @@ export default function Post({ post }) {
           />
           <div className="post-interact">
             <div className="post-like-counter">
-              <img src={Heart} alt="" />
-              <img src={Like} alt="" />
+              <img src='assets/heart.png' alt="" />
+              <img src='assets/like.png'alt="" />
               <span>{like}</span>
             </div>
 

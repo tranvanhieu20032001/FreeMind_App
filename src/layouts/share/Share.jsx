@@ -24,17 +24,17 @@ export default function Share() {
         <div className="share-bottom">
           <div className="share-options">
             <div className="share-option">
-              <MdPermMedia size={25} color="#ff0c0c" />
-              <span>Video or Photo</span>
+              <MdPermMedia color="#ff0c0c" />
+              <span>Video/Photo</span>
             </div>
 
             <div className="share-option">
-              <FaUserTag size={25} color="#4285f4" />
+              <FaUserTag color="#4285f4" />
               <span>Tag</span>
             </div>
 
             <div className="share-option">
-              <BsEmojiSmile size={25} color="#ffd600"/>
+              <BsEmojiSmile color="#ffd600"/>
               <span>Feelings</span>
             </div>
           </div>
