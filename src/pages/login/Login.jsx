@@ -31,7 +31,7 @@ export default function Login() {
           </div>
 
           <button className="btn btn-login">Login</button>
-        <a className="forgetpassword gradient-text">Forget Password</a>
+        <a className="forgetpassword gradient-text" href="#">Forget Password</a>
         <hr/>
         <button className="btn btn-login">Create new Acount</button>
 

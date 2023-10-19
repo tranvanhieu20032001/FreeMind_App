@@ -56,7 +56,7 @@ export default function Topbar() {
           </div>
         </div>
         <div className="leftbar-menu" onClick={context._showLeftbar}>
-        <MdFormatListBulleted className='icon' />
+        <MdFormatListBulleted size={25} className='icon' />
         </div>
       </div>
 

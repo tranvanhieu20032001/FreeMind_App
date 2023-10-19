@@ -5,10 +5,12 @@
 
 .birthday-box{
     font-size: 15px;
+    margin: 20px;
 }
 
 .birthday-box img{
     margin-right: 5px;
+    width: 40px;
 }
 
 b{
@@ -111,7 +113,7 @@ b{
 @media screen and (max-width: 768px){
     .rightbar{
         display: none;
-        height:calc(100vh - 110px) ;
+        /* height:calc(100vh - 110px) ; */
     }
 }
 

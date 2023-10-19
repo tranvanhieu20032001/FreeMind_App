@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./darkmode.css";
-import {ReactComponent as Moon} from "./../../assets/images/Moon.svg"
-import {ReactComponent as Sun} from "./../../assets/images/Sun.svg"
+import {ReactComponent as Moon} from "./Moon.svg"
+import {ReactComponent as Sun} from "./Sun.svg"
 
 const DarkMode = () => {
     const [darkmode, setDarkMode] = useState(() => localStorage.mode === "dark");

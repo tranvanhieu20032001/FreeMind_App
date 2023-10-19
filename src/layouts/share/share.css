@@ -19,7 +19,7 @@
     height: 40px;
     border: none;
     outline: none;
-    font-size: 1.6rem;
+    font-size: 16px;
     padding: 0 5px;
 }
 
@@ -28,6 +28,7 @@
     justify-content: space-between;
     align-items: center;
     height: 40px;
+    gap: 10px;
 }
 
 .share-options{
@@ -43,6 +44,7 @@
     font-size: 16px;
     color: var(--text-color);
     font-weight: 600;
+    cursor: pointer;
 }
 
 .share-option >span{
@@ -55,4 +57,17 @@
     font-size: 16px;
     flex: 2;
    justify-content: flex-end;
+}
+
+@media screen and (max-width: 768px){
+  
+}
+
+@media screen and (max-width: 576px) {
+    .share-input{
+        font-size: 12px;
+    }
+    .share-option{
+       font-size: 12px;
+    }
 }

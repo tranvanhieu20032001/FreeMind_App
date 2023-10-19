@@ -123,6 +123,17 @@ body,.sub-bg {
     .container {
         padding: 0 10px;
     }
+    .btn{
+        font-size: 12px;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
 }
 
-@media screen and (max-width: 576px) {}
+@media screen and (max-width: 576px) {
+    .username{
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+}

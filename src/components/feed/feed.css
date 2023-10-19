@@ -12,4 +12,7 @@
         height:calc(100vh - 110px) ; 
         margin: 20px 0px;
     }
+    .feed-wrapper{
+        padding: 0;
+    }
 }
