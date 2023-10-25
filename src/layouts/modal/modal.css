@@ -1,0 +1,49 @@
+
+.form-modal{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 10px;
+    gap: 20px;
+}
+
+.form-modal h1{
+    font-size: 24px;
+    font-weight: 700;
+    padding-top: 20px;
+    text-transform: capitalize;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.form-modal .form-group{
+    width: 100%;
+}
+
+
+.wrapper-item{
+    display: flex;
+    column-gap: 20px;
+}
+
+input[type="date"]::-webkit-datetime-edit {
+    background: linear-gradient(to right, #4e7ee7, #ee45ee); /* Gradient mặc định */
+    background-clip: text; /* Áp dụng gradient cho phần văn bản */
+    -webkit-background-clip: text; /* Hỗ trợ trình duyệt Safari */
+    color: transparent; /* Màu chữ trong suốt */
+    transition: background-position 0.5s; /* Thời gian chuyển đổi */
+    display: inline-block; /* Hiển thị như khối để bao quanh nội dung */ 
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+   color: #ee45ee;
+  }
+
+  .customOverlay {
+    background: rgba(101, 101, 101, 0.5);
+    backdrop-filter:blur(2px) ;
+  }
+
+  .customModal {
+    max-width: 545px;
+    width: 100%;
+  }

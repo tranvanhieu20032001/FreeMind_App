@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./rightbar.css";
-import { MdLocationOn, MdSchool } from "react-icons/md";
+import { MdCake, MdLocationOn, MdSchool } from "react-icons/md";
 import { BsFillHouseHeartFill, BsPersonHeart } from "react-icons/bs";
+import { BiEdit } from "react-icons/bi";
+import Md_editprofile from "../../layouts/modal/Md_editprofile";
 import { Users } from "../../data/data";
 
-export default function Rightbar({profile}) {
+export default function Rightbar({ profile }) {
+  const [openMd, setOpenMd] = useState(false);
+  const onOpenModal = () => setOpenMd(true);
+
+
   const HomeRightBar = () => (
     <>
       <div className="birthday-box">
-        <img src='assets/gift.png' alt="" />
+        <img src="assets/gift.png" alt="" />
         <span>
           <b>Dani Johson</b> and <b>2 other people</b> have a birthday today
         </span>
@@ -36,8 +42,18 @@ export default function Rightbar({profile}) {
 
   const RightbarProfile = () => (
     <>
-      <h4 className="user-info">User Information</h4>
+      <div className="wrapper-item">
+        <h4 className="user-info">User Information</h4>
+        <div className="edit-infor" onClick={onOpenModal}>
+          <BiEdit />
+        </div>
+      </div>
+      <Md_editprofile openMd={openMd} setOpenMd={setOpenMd}  />
       <div className="info">
+        <div className="info-item">
+          <MdCake />
+          <span>20-03-2001</span>
+        </div>
         <div className="info-item">
           <MdLocationOn />
           <span>From Quang Nam</span>
@@ -75,7 +91,8 @@ export default function Rightbar({profile}) {
   return (
     <div className="rightbar">
       <div className="rightbar-container">
-        {profile?<RightbarProfile />: <HomeRightBar/>}
+        <RightbarProfile />
+        {/* {profile?<RightbarProfile />: <HomeRightBar/>} */}
       </div>
     </div>
   );
