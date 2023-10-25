@@ -34,7 +34,7 @@ function App() {
   const [showleftbar, setShowleftbar] = useState(false)
   const _showLeftbar = ()=>{
     setShowleftbar(!showleftbar)
-    console.log(showleftbar);
+
 }
 const value ={
   showleftbar,

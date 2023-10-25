@@ -1,19 +1,23 @@
 import React, { useState } from "react";
-import "./share.css";
+import "react-responsive-modal/styles.css";
+import { Modal } from "react-responsive-modal";
 import { MdPermMedia } from "react-icons/md";
 import { FaUserTag } from "react-icons/fa";
 import { BsEmojiSmile } from "react-icons/bs";
-import Md_editprofile from "../modal/Md_editprofile";
-import Md_sharepost from "../modal/Md_sharepost";
-// import Md_sharepost from "../modal/Md_sharepost";
+import "./modal.css";
 
-export default function Share() {
-  const [openMd, setOpenMd] = useState(false);
-  const onOpenModal = () => setOpenMd(true);
-
+export default function Md_sharepost({ openMd, setOpenMd }) {
   return (
-    <div className="share">
-      <div className="share-wrapper">
+    <div>
+      <Modal
+        open={openMd}
+        onClose={() => setOpenMd(!openMd)}
+        classNames={{
+          overlay: "customOverlay",
+          modal: "customModal",
+        }}
+      >
+       <div className="share-wrapper">
         <div className="share-top">
           <img
             className="avatar"
@@ -45,11 +49,11 @@ export default function Share() {
             </div>
           </div>
           <div className="share-btn">
-            <button className="btn" onClick={onOpenModal}>share</button>
+            <button className="btn">share</button>
           </div>
         </div>
       </div>
-      <Md_sharepost openMd={openMd} setOpenMd={setOpenMd}  />
+      </Modal>
     </div>
   );
 }

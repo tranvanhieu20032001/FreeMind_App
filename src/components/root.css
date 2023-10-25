@@ -40,6 +40,12 @@ hr{
     padding: 0 20px;
 }
 
+.d-flex{
+    display: flex;
+    align-items: center;
+    gap: 10%;
+}
+
 /* Light mode */
 .background {
     background: var(--background);
@@ -115,9 +121,14 @@ body,.sub-bg {
 .dark .icon, .dark .logo, .dark .logo-mb{
     color: var(--icon-dark);
 }
+
 .dark .text{
     color: var(--first-color);
 }
+
+
+
+
 /* For media */
 @media screen and (max-width: 768px) {
     .container {

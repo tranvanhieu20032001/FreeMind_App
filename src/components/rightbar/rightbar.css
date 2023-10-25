@@ -109,6 +109,31 @@ b{
     cursor: pointer;
 }
 
+.edit-icon{
+    display: none;
+}
+
+.edit-info:hover .edit-icon{
+    display: block;
+    cursor: pointer;
+}
+
+.wrapper-item{
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.edit-infor{
+    display: none;
+}
+
+.wrapper-item:hover .edit-infor{
+    display: block;
+    cursor: pointer;
+}
+
+
 
 @media screen and (max-width: 768px){
     .rightbar{
